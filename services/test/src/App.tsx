@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { ThemeProvider } from '@emotion/react';
-import { vars } from '@ds/themes';
+import { vars, classes } from '@ds/themes';
 import styled from '@emotion/styled';
 
 const theme = {
@@ -12,6 +12,7 @@ const theme = {
 }
 
 function App() {
+  console.log(classes);
   return (
     <ThemeProvider theme={theme}>
       <View />
@@ -25,7 +26,7 @@ const View = () => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <Text>
+      <Text className='headingxl'>
         Edit <code>src/App.tsx</code> and save to reload.
       </Text>
       <a
