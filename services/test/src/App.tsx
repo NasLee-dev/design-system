@@ -28,6 +28,7 @@ const View = () => (
       <img src={logo} className="App-logo" alt="logo" />
       <Text className='headingxl'>
         Edit <code>src/App.tsx</code> and save to reload.
+        {vars.box.radii.base}
       </Text>
       <a
         className="App-link"
