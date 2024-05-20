@@ -1,32 +1,32 @@
 {
   "run": {
-    "command": "nx build test",
-    "startTime": "2024-05-17T13:00:48.630Z",
-    "endTime": "2024-05-17T13:01:12.727Z",
+    "command": "nx build @ds/themes",
+    "startTime": "2024-05-20T13:55:02.419Z",
+    "endTime": "2024-05-20T13:55:11.211Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@ds/themes:build",
+      "taskId": "@ds/esbuild-config:build",
       "target": "build",
-      "projectName": "@ds/themes",
-      "hash": "2964206740096068476",
-      "startTime": "2024-05-17T13:00:48.644Z",
-      "endTime": "2024-05-17T13:00:58.318Z",
+      "projectName": "@ds/esbuild-config",
+      "hash": "8009131439986507793",
+      "startTime": "2024-05-20T13:55:02.430Z",
+      "endTime": "2024-05-20T13:55:04.594Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
     },
     {
-      "taskId": "test:build",
+      "taskId": "@ds/themes:build",
       "target": "build",
-      "projectName": "test",
-      "hash": "1936768998023590045",
-      "startTime": "2024-05-17T13:00:58.322Z",
-      "endTime": "2024-05-17T13:01:12.727Z",
+      "projectName": "@ds/themes",
+      "hash": "1181280518424094734",
+      "startTime": "2024-05-20T13:55:04.596Z",
+      "endTime": "2024-05-20T13:55:11.210Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 1
+      "status": 0
     }
   ]
 }
