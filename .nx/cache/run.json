@@ -1,8 +1,8 @@
 {
   "run": {
-    "command": "nx build @ds/themes",
-    "startTime": "2024-05-20T13:55:02.419Z",
-    "endTime": "2024-05-20T13:55:11.211Z",
+    "command": "nx build @ds/react-components-layout",
+    "startTime": "2024-05-23T13:57:16.755Z",
+    "endTime": "2024-05-23T13:57:29.074Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "@ds/esbuild-config:build",
       "target": "build",
       "projectName": "@ds/esbuild-config",
-      "hash": "8009131439986507793",
-      "startTime": "2024-05-20T13:55:02.430Z",
-      "endTime": "2024-05-20T13:55:04.594Z",
+      "hash": "1256516390738132311",
+      "startTime": "2024-05-23T13:57:16.769Z",
+      "endTime": "2024-05-23T13:57:19.344Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
@@ -21,12 +21,23 @@
       "taskId": "@ds/themes:build",
       "target": "build",
       "projectName": "@ds/themes",
-      "hash": "1181280518424094734",
-      "startTime": "2024-05-20T13:55:04.596Z",
-      "endTime": "2024-05-20T13:55:11.210Z",
+      "hash": "14128057054066214420",
+      "startTime": "2024-05-23T13:57:19.345Z",
+      "endTime": "2024-05-23T13:57:26.414Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
+    },
+    {
+      "taskId": "@ds/react-components-layout:build",
+      "target": "build",
+      "projectName": "@ds/react-components-layout",
+      "hash": "3516290113426676599",
+      "startTime": "2024-05-23T13:57:26.416Z",
+      "endTime": "2024-05-23T13:57:29.074Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
     }
   ]
 }
