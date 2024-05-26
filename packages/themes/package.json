@@ -1,0 +1,26 @@
+{
+  "name": "@ds/themes",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./themes.css": "./dist/themes.css"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn run build:js && yarn run build:type && yarn run build:css",
+    "build:js": "node build.js",
+    "build:type": "tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist",
+    "build:css": "node ./scripts/build-css-module.js"
+  },
+  "devDependencies": {
+    "@ds/esbuild-config": "workspace:^",
+    "typescript": "^5.2.2"
+  }
+}
