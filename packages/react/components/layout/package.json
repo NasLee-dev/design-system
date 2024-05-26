@@ -19,6 +19,7 @@
     "dev": "yarn build:js --watch && yarn build:type --watch"
   },
   "devDependencies": {
+    "@ds/esbuild-config": "workspace:^",
     "@ds/themes": "workspace:^",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
@@ -33,6 +34,8 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
+    "@ds/esbuild-config": "workspace:^",
+    "@ds/themes": "workspace:^",
     "react": "*"
   },
   "dependencies": {
