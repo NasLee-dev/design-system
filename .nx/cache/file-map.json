@@ -1,6 +1,6 @@
 {
   "version": "6.0",
-  "nxVersion": "19.0.6",
+  "nxVersion": "19.1.0",
   "deps": {
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
@@ -13,7 +13,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.13",
-    "nx": "^19.0.4",
+    "nx": "^19.1.0",
     "prettier": "^3.0.3",
     "typescript": "^5.4.5"
   },
@@ -27,7 +27,7 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".eslint.js",
+        "file": ".eslintrc.js",
         "hash": "6802605025850187541"
       },
       {
@@ -35,7 +35,7 @@
         "hash": "8554264731685975598"
       },
       {
-        "file": ".prittierrc",
+        "file": ".prettierrc",
         "hash": "2052412003981761678"
       },
       {
@@ -124,11 +124,11 @@
       },
       {
         "file": "package.json",
-        "hash": "685639313592316087"
+        "hash": "6608870252383205300"
       },
       {
         "file": "tsconfig.base.json",
-        "hash": "10771796062736687957"
+        "hash": "12919597497980113116"
       },
       {
         "file": "tsconfig.eslint.json",
@@ -136,51 +136,10 @@
       },
       {
         "file": "yarn.lock",
-        "hash": "8114970706963059494"
+        "hash": "18326693942736334547"
       }
     ],
     "projectFileMap": {
-      "@ds/esbuild-config": [
-        {
-          "file": "packages/esbuild-config/README.md",
-          "hash": "6886952344311067916"
-        },
-        {
-          "file": "packages/esbuild-config/index.js",
-          "hash": "3827031141927899532"
-        },
-        {
-          "file": "packages/esbuild-config/package.json",
-          "hash": "8551291180655402055"
-        }
-      ],
-      "@ds/react-components-layout": [
-        {
-          "file": "packages/react/components/layout/build.js",
-          "hash": "10024860138368064033"
-        },
-        {
-          "file": "packages/react/components/layout/package.json",
-          "hash": "12600004179034014724",
-          "deps": [
-            "@ds/esbuild-config",
-            "@ds/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/layout/src/Block.tsx",
-          "hash": "5160009443643106429"
-        },
-        {
-          "file": "packages/react/components/layout/src/index.ts",
-          "hash": "1449231299112372428"
-        },
-        {
-          "file": "packages/react/components/layout/tsconfig.json",
-          "hash": "2444245072852979607"
-        }
-      ],
       "@ds/themes": [
         {
           "file": "packages/themes/build.js",
@@ -188,7 +147,7 @@
         },
         {
           "file": "packages/themes/package.json",
-          "hash": "7151108385005327512",
+          "hash": "5533607196302718754",
           "deps": [
             "@ds/esbuild-config",
             "npm:typescript"
@@ -245,6 +204,47 @@
         {
           "file": "packages/themes/tsconfig.json",
           "hash": "9757273637688057132"
+        }
+      ],
+      "@ds/esbuild-config": [
+        {
+          "file": "packages/esbuild-config/README.md",
+          "hash": "6886952344311067916"
+        },
+        {
+          "file": "packages/esbuild-config/index.js",
+          "hash": "3827031141927899532"
+        },
+        {
+          "file": "packages/esbuild-config/package.json",
+          "hash": "8551291180655402055"
+        }
+      ],
+      "@ds/react-components-layout": [
+        {
+          "file": "packages/react/components/layout/build.js",
+          "hash": "9219515693451921604"
+        },
+        {
+          "file": "packages/react/components/layout/package.json",
+          "hash": "17694942270298247967",
+          "deps": [
+            "@ds/esbuild-config",
+            "@ds/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/layout/src/Block.tsx",
+          "hash": "13587484772723829549"
+        },
+        {
+          "file": "packages/react/components/layout/src/index.ts",
+          "hash": "16280579595165486571"
+        },
+        {
+          "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "2444245072852979607"
         }
       ]
     }

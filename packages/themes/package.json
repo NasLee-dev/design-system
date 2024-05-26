@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@ds/esbuild-config": "workspace:^",
-    "esbuild": "^0.16.17",
     "typescript": "^5.4.5"
   }
 }

@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx build @ds/react-components-layout",
-    "startTime": "2024-05-23T13:57:16.755Z",
-    "endTime": "2024-05-23T13:57:29.074Z",
+    "startTime": "2024-05-26T07:26:41.579Z",
+    "endTime": "2024-05-26T07:26:54.614Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "@ds/esbuild-config:build",
       "target": "build",
       "projectName": "@ds/esbuild-config",
-      "hash": "1256516390738132311",
-      "startTime": "2024-05-23T13:57:16.769Z",
-      "endTime": "2024-05-23T13:57:19.344Z",
+      "hash": "266475329534494998",
+      "startTime": "2024-05-26T07:26:41.592Z",
+      "endTime": "2024-05-26T07:26:44.308Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
@@ -21,9 +21,9 @@
       "taskId": "@ds/themes:build",
       "target": "build",
       "projectName": "@ds/themes",
-      "hash": "14128057054066214420",
-      "startTime": "2024-05-23T13:57:19.345Z",
-      "endTime": "2024-05-23T13:57:26.414Z",
+      "hash": "12476477873695965024",
+      "startTime": "2024-05-26T07:26:44.309Z",
+      "endTime": "2024-05-26T07:26:50.819Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
@@ -32,9 +32,9 @@
       "taskId": "@ds/react-components-layout:build",
       "target": "build",
       "projectName": "@ds/react-components-layout",
-      "hash": "3516290113426676599",
-      "startTime": "2024-05-23T13:57:26.416Z",
-      "endTime": "2024-05-23T13:57:29.074Z",
+      "hash": "13023787605466334174",
+      "startTime": "2024-05-26T07:26:50.821Z",
+      "endTime": "2024-05-26T07:26:54.613Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

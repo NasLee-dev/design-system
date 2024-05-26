@@ -1,7 +1,7 @@
-import { blockStyle } from "./block.css"
-
 export const Block = () => {
-  return (
-		<div clasName={blockStyle}>Block</div>
-	)
+    return (
+        <div>
+            <h1>Block</h1>
+        </div>
+    )
 }

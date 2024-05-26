@@ -1,6 +1,6 @@
 {
-  "version": "0.0.1",
   "name": "@ds/react-components-layout",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": {
@@ -21,11 +21,9 @@
   "devDependencies": {
     "@ds/esbuild-config": "workspace:^",
     "@ds/themes": "workspace:^",
-    "@types/react": "^18.3.2",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vanilla-extract/css": "^1.15.2",
-    "@vanilla-extract/esbuild-plugin": "^2.3.6",
-    "esbuild": "^0.16.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.4.5"
