@@ -1493,6 +1493,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ds/react-components-button@workspace:^, @ds/react-components-button@workspace:packages/react/components/button":
+  version: 0.0.0-use.local
+  resolution: "@ds/react-components-button@workspace:packages/react/components/button"
+  dependencies:
+    "@ds/esbuild-config": "workspace:^"
+    "@ds/themes": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vanilla-extract/css": "npm:^1.13.0"
+    "@vanilla-extract/dynamic": "npm:^2.1.1"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.0"
+    "@vanilla-extract/recipes": "npm:^0.5.3"
+    "@vanilla-extract/sprinkles": "npm:^1.6.2"
+    autoprefixer: "npm:^10.4.15"
+    clsx: "npm:^2.1.1"
+    postcss: "npm:^8.4.29"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:4.4.3"
+    vite: "npm:^5.2.12"
+  peerDependencies:
+    "@ds/esbuild-config": "workspace:^"
+    "@ds/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ds/react-components-layout@workspace:^, @ds/react-components-layout@workspace:packages/react/components/layout":
   version: 0.0.0-use.local
   resolution: "@ds/react-components-layout@workspace:packages/react/components/layout"
@@ -1524,6 +1551,7 @@ __metadata:
   resolution: "@ds/storybook@workspace:services/storybook"
   dependencies:
     "@chromatic-com/storybook": "npm:^1.5.0"
+    "@ds/react-components-button": "workspace:^"
     "@ds/react-components-layout": "workspace:^"
     "@ds/themes": "workspace:^"
     "@storybook/addon-essentials": "npm:^8.1.5"
@@ -4389,6 +4417,15 @@ __metadata:
     modern-ahocorasick: "npm:^1.0.0"
     picocolors: "npm:^1.0.0"
   checksum: ea380a3951e5846f27209bd386e57be54e4e94a71952c42e482a3d717e8e1e574fdb655cb2031ee1482bed4fbe642d7161ed998d61e8908d0dfdeddab88119f8
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/dynamic@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@vanilla-extract/dynamic@npm:2.1.1"
+  dependencies:
+    "@vanilla-extract/private": "npm:^1.0.5"
+  checksum: 31f9131f205bfd575a38b2ae535797413e9c6b1f1592da97038e3a827f9c497d7e8762a1e56882589cf24850d3acc5cdb5a69a61b2b117dc9e1214615a3d1590
   languageName: node
   linkType: hard
 

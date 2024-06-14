@@ -3,6 +3,7 @@
   "packageManager": "yarn@4.0.2",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
+    "@ds/react-components-button": "workspace:^",
     "@ds/react-components-layout": "workspace:^",
     "@ds/themes": "workspace:^",
     "@storybook/addon-essentials": "^8.1.5",
