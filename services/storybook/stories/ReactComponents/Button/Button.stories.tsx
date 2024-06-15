@@ -28,7 +28,7 @@ export default {
 
 export const ButtonStory = {
   args: {
-    size: "lg",
+    size: "md",
     children: 'Button',
     variant: "outline",
     disabled: false,
