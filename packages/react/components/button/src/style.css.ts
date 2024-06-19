@@ -31,10 +31,10 @@ export const buttonStyle = recipe({
     },
     '&:focus-visible': {
       outline: "none",
-
       boxShadow: vars.box.shadows.outline,
     }
   },
+
   variants: {
     size: {
       xs: {
