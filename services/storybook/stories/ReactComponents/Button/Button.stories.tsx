@@ -1,7 +1,8 @@
 import "@ds/react-components-button/style.css";
 import { Button as _Button } from '@ds/react-components-button';
 import { vars } from '@ds/themes';
-//  Box is a layout component that can be used to wrap other components and apply padding, margin, background color, and more.
+import { useButton } from '@ds/react-hooks-button';
+import { Text } from '@ds/react-components-layout';
 
 export default {
   title: "React Components/Button",
@@ -32,5 +33,29 @@ export const ButtonStory = {
     children: 'Button',
     variant: "outline",
     disabled: false,
+    isLoading: false,
+    leftIcon: "🚀",
+  },
+};
+
+export const TextButtonStory = {
+  render: () => {
+    const { buttonProps } = useButton({
+      elementType: "div",
+      onClick: () => {
+        console.log("Button clicked");
+      }
+    });
+    return (
+      <Text
+        {...buttonProps}
+        as="div"
+        fontSize="md"
+        color="green"
+        style={{ cursor: "pointer", userSelect: "none" }}
+      >
+        텍스트 버튼입니다.
+      </Text>
+    )
   }
 };

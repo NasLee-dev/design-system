@@ -1498,6 +1498,7 @@ __metadata:
   resolution: "@ds/react-components-button@workspace:packages/react/components/button"
   dependencies:
     "@ds/esbuild-config": "workspace:^"
+    "@ds/react-hooks-button": "workspace:^"
     "@ds/themes": "workspace:^"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
@@ -1546,6 +1547,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ds/react-hooks-button@workspace:^, @ds/react-hooks-button@workspace:packages/react/hooks/button":
+  version: 0.0.0-use.local
+  resolution: "@ds/react-hooks-button@workspace:packages/react/hooks/button"
+  dependencies:
+    "@ds/esbuild-config": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:4.4.3"
+    vite: "npm:^5.2.12"
+  peerDependencies:
+    "@ds/esbuild-config": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ds/storybook@workspace:services/storybook":
   version: 0.0.0-use.local
   resolution: "@ds/storybook@workspace:services/storybook"
@@ -1553,6 +1572,7 @@ __metadata:
     "@chromatic-com/storybook": "npm:^1.5.0"
     "@ds/react-components-button": "workspace:^"
     "@ds/react-components-layout": "workspace:^"
+    "@ds/react-hooks-button": "workspace:^"
     "@ds/themes": "workspace:^"
     "@storybook/addon-essentials": "npm:^8.1.5"
     "@storybook/addon-interactions": "npm:^8.1.5"

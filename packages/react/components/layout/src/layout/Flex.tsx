@@ -2,13 +2,13 @@ import * as React from "react";
 import { Ref } from "react";
 import { FlexProps } from "./types";
 import { clsx } from "clsx";
-import { StyleSprinkles } from "../core/style.css";
+import { BaseStyle, StyleSprinkles } from "../core/style.css";
 import { extractSprinklesProps } from "../utils/properties";
 import { vars } from "@ds/themes";
 
 const Flex = (props: FlexProps, ref: Ref<HTMLElement>) => {
 	const { as = 'div', color, background, align, basis, direction, grow, justify, shrink, wrap, gap, children } = props;
-	return React.createElement(as, { ...props, ref, className: clsx([StyleSprinkles(extractSprinklesProps(props, Array.from(StyleSprinkles.properties))), props.className]), 
+	return React.createElement(as, { ...props, ref, className: clsx([BaseStyle, StyleSprinkles(extractSprinklesProps(props, Array.from(StyleSprinkles.properties))), props.className]), 
 		style: {
 			display: 'flex',
 			alignItems: align,
