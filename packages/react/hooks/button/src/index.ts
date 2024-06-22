@@ -4,3 +4,4 @@ export type {
 } from "./types";
 
 export { useButton } from "./useButton";
+export { useToggleButton } from "./useToggleButton";

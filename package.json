@@ -10,7 +10,7 @@
     "graph": "nx run-many --target=build --graph",
     "dev:all": "yarn dev:storybook && yarn dev:packages",
     "dev:storybook": "nx storybook @ds/storybook",
-    "dev:packages": "nx run-many --target=dev --projects='@ds/react-components-*'"
+    "dev:packages": "nx run-many --target=dev --projects='@ds/react-components-*,@ds/react-hooks-*'"
   },
   "devDependencies": {
     "@storybook/addon-docs": "^8.1.5",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@ds/react-components-layout": "workspace:^",
+    "@ds/react-hooks-button": "workspace:^",
     "@ds/themes": "workspace:^",
     "typescript": "4.4.3",
     "vite": "^4.4.9"

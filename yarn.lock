@@ -1552,6 +1552,25 @@ __metadata:
   resolution: "@ds/react-hooks-button@workspace:packages/react/hooks/button"
   dependencies:
     "@ds/esbuild-config": "workspace:^"
+    "@ds/react-hooks-toggle": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:4.4.3"
+    vite: "npm:^5.2.12"
+  peerDependencies:
+    "@ds/esbuild-config": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ds/react-hooks-toggle@workspace:^, @ds/react-hooks-toggle@workspace:packages/react/hooks/toggle":
+  version: 0.0.0-use.local
+  resolution: "@ds/react-hooks-toggle@workspace:packages/react/hooks/toggle"
+  dependencies:
+    "@ds/esbuild-config": "workspace:^"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     clsx: "npm:^2.1.1"
@@ -5946,6 +5965,7 @@ __metadata:
   resolution: "design-system@workspace:."
   dependencies:
     "@ds/react-components-layout": "workspace:^"
+    "@ds/react-hooks-button": "workspace:^"
     "@ds/themes": "workspace:^"
     "@storybook/addon-docs": "npm:^8.1.5"
     "@typescript-eslint/eslint-plugin": "npm:^6.5.0"

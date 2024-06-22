@@ -1,7 +1,7 @@
 import "@ds/react-components-button/style.css";
 import { Button as _Button } from '@ds/react-components-button';
 import { vars } from '@ds/themes';
-import { useButton } from '@ds/react-hooks-button';
+import { useButton, useToggleButton } from '@ds/react-hooks-button';
 import { Text } from '@ds/react-components-layout';
 
 export default {
@@ -29,33 +29,56 @@ export default {
 
 export const ButtonStory = {
   args: {
-    size: "md",
-    children: 'Button',
+    size: "lg",
+    children: "Button",
     variant: "outline",
-    disabled: false,
+    isDisabled: false,
     isLoading: false,
-    leftIcon: "🚀",
+    leftIcon: "😀",
   },
 };
 
 export const TextButtonStory = {
   render: () => {
-    const { buttonProps } = useButton({
+    const {
+      buttonProps,
+    } = useButton({
       elementType: "div",
       onClick: () => {
-        console.log("Button clicked");
-      }
-    });
+        console.log("ttt");
+      },
+    }); 
+
     return (
       <Text
         {...buttonProps}
         as="div"
         fontSize="md"
         color="green"
-        style={{ cursor: "pointer", userSelect: "none" }}
+        style={{
+          userSelect: "none",
+          cursor: "pointer",
+        }}
       >
         텍스트 버튼입니다.
       </Text>
-    )
+    );
   }
+};
+
+
+export const ToggleButtonStory = {
+  render: () => {
+    const { buttonProps, isSelected } = useToggleButton({ elementType: 'button' }, false);
+
+    return (
+      <_Button
+        {...buttonProps}
+        variant={isSelected ? "solid" : "outline"}
+        color="green"
+      >
+        {isSelected ? "😀" : "😂"}
+      </_Button>
+    );
+  },
 };

@@ -1,5 +1,5 @@
 {
-  "name": "@ds/react-hooks-button",
+  "name": "@ds/react-hooks-toggle",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
@@ -30,7 +30,6 @@
     "react": "*"
   },
   "dependencies": {
-    "@ds/react-hooks-toggle": "workspace:^",
     "clsx": "^2.1.1",
     "vite": "^5.2.12"
   }
