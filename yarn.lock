@@ -1493,6 +1493,34 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ds/react-components-accordion@workspace:packages/react/components/accordion":
+  version: 0.0.0-use.local
+  resolution: "@ds/react-components-accordion@workspace:packages/react/components/accordion"
+  dependencies:
+    "@ds/esbuild-config": "workspace:^"
+    "@ds/react-hooks-button": "workspace:^"
+    "@ds/themes": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vanilla-extract/css": "npm:^1.13.0"
+    "@vanilla-extract/dynamic": "npm:^2.1.1"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.0"
+    "@vanilla-extract/recipes": "npm:^0.5.3"
+    "@vanilla-extract/sprinkles": "npm:^1.6.2"
+    autoprefixer: "npm:^10.4.15"
+    clsx: "npm:^2.1.1"
+    postcss: "npm:^8.4.29"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:4.4.3"
+    vite: "npm:^5.2.12"
+  peerDependencies:
+    "@ds/esbuild-config": "workspace:^"
+    "@ds/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ds/react-components-button@workspace:^, @ds/react-components-button@workspace:packages/react/components/button":
   version: 0.0.0-use.local
   resolution: "@ds/react-components-button@workspace:packages/react/components/button"
