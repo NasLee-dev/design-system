@@ -7,25 +7,32 @@ import { accordionStyle } from "./styles.css";
 import { AccordionProps } from "./types";
 
 const Accordion = (props: AccordionProps, ref: React.Ref<HTMLDivElement>) => {
-  const { children, defaultActiveItems = [], className, ...rest } = props;
-  const [activeItems, setActiveItems] = useState<string[]>(defaultActiveItems);
+  const { defaultActiveItems = [], children, className, ...rest } = props;
+
+  const [activeItems, setActiveItems] =
+    useState<string[]>(defaultActiveItems);
 
   const handleSetActiveItem = (item: string) => {
     if (activeItems.includes(item)) {
-      setActiveItems(activeItems.filter((i) => i !== item));
+      setActiveItems(activeItems.filter((activeItem) => activeItem !== item));
     } else {
       setActiveItems([...activeItems, item]);
     }
-  }
-  return <AccordionContext.Provider value={{
-    activeItems,
-    setActiveItem: handleSetActiveItem
-  }}>
-    <div {...rest} ref={ref} className={clsx([accordionStyle, className])} >
-      {children}
-    </div>
-  </AccordionContext.Provider>
-}
+  };  
+
+  return (
+    <AccordionContext.Provider
+      value={{
+        activeItems,
+        setActiveItem: handleSetActiveItem,
+      }}
+    >
+      <div {...rest} ref={ref} className={clsx([accordionStyle, className])}>
+        {children}
+      </div>
+    </AccordionContext.Provider>
+  );
+};
 
 const _Accordion = React.forwardRef(Accordion);
 export { _Accordion as Accordion };

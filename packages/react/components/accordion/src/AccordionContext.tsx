@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react"
+import { createContext, useContext } from "react";
 
 export type AccordionContextType = {
   activeItems: string[];
@@ -10,8 +10,5 @@ export const AccordionContext = createContext<AccordionContextType>({
   setActiveItem: () => {},
 });
 
-export const useAccordionContext = () => {
-  useContext(AccordionContext);
-}
-
+export const useAccordionContext = () => useContext(AccordionContext);
 export default AccordionContext;

@@ -1,4 +1,4 @@
-import * as clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 import { accordionItemStyle } from "./styles.css";
 import { AccordionItemProps } from "./types";
