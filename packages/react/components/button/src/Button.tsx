@@ -7,7 +7,7 @@ import { ButtonProps } from "./types";
 import { useButton } from "@ds/react-hooks-button";
 
 const Button = (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
-  const { buttonProps, } = useButton(props as any);
+  const { buttonProps } = useButton(props as any);
   const {
     variant = "solid",
     size = "md",

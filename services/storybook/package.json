@@ -23,6 +23,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@ds/react-components-accordion": "workspace:^",
     "@ds/react-hooks-button": "workspace:^"
   }
 }
