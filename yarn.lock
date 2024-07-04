@@ -1547,6 +1547,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ds/react-components-input@workspace:^, @ds/react-components-input@workspace:packages/react/components/input":
+  version: 0.0.0-use.local
+  resolution: "@ds/react-components-input@workspace:packages/react/components/input"
+  dependencies:
+    "@ds/esbuild-config": "workspace:^"
+    "@ds/react-hooks-input": "workspace:^"
+    "@ds/themes": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vanilla-extract/css": "npm:^1.13.0"
+    "@vanilla-extract/dynamic": "npm:^2.1.1"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.0"
+    "@vanilla-extract/recipes": "npm:^0.5.3"
+    "@vanilla-extract/sprinkles": "npm:^1.6.2"
+    autoprefixer: "npm:^10.4.15"
+    clsx: "npm:^2.1.1"
+    postcss: "npm:^8.4.29"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:4.4.3"
+  peerDependencies:
+    "@ds/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ds/react-components-layout@workspace:^, @ds/react-components-layout@workspace:packages/react/components/layout":
   version: 0.0.0-use.local
   resolution: "@ds/react-components-layout@workspace:packages/react/components/layout"
@@ -1590,6 +1616,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ds/react-hooks-input@workspace:^, @ds/react-hooks-input@workspace:packages/react/hooks/input":
+  version: 0.0.0-use.local
+  resolution: "@ds/react-hooks-input@workspace:packages/react/hooks/input"
+  dependencies:
+    "@ds/esbuild-config": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:4.4.3"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ds/react-hooks-toggle@workspace:^, @ds/react-hooks-toggle@workspace:packages/react/hooks/toggle":
   version: 0.0.0-use.local
   resolution: "@ds/react-hooks-toggle@workspace:packages/react/hooks/toggle"
@@ -1615,8 +1657,10 @@ __metadata:
     "@chromatic-com/storybook": "npm:^1.5.0"
     "@ds/react-components-accordion": "workspace:^"
     "@ds/react-components-button": "workspace:^"
+    "@ds/react-components-input": "workspace:^"
     "@ds/react-components-layout": "workspace:^"
     "@ds/react-hooks-button": "workspace:^"
+    "@ds/react-hooks-input": "workspace:^"
     "@ds/themes": "workspace:^"
     "@storybook/addon-essentials": "npm:^8.1.5"
     "@storybook/addon-interactions": "npm:^8.1.5"

@@ -4,6 +4,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
     "@ds/react-components-button": "workspace:^",
+    "@ds/react-components-input": "workspace:^",
     "@ds/react-components-layout": "workspace:^",
     "@ds/themes": "workspace:^",
     "@storybook/addon-essentials": "^8.1.5",
@@ -25,6 +26,7 @@
   "dependencies": {
     "@ds/react-components-accordion": "workspace:^",
     "@ds/react-components-layout": "workspace:^",
-    "@ds/react-hooks-button": "workspace:^"
+    "@ds/react-hooks-button": "workspace:^",
+    "@ds/react-hooks-input": "workspace:^"
   }
 }
