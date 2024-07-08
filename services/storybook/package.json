@@ -27,6 +27,7 @@
     "@ds/react-components-accordion": "workspace:^",
     "@ds/react-components-layout": "workspace:^",
     "@ds/react-hooks-button": "workspace:^",
-    "@ds/react-hooks-input": "workspace:^"
+    "@ds/react-hooks-input": "workspace:^",
+    "@ds/react-hooks-select": "workspace:^"
   }
 }
