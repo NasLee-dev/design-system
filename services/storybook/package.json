@@ -6,6 +6,8 @@
     "@ds/react-components-button": "workspace:^",
     "@ds/react-components-input": "workspace:^",
     "@ds/react-components-layout": "workspace:^",
+    "@ds/react-components-select": "workspace:^",
+    "@ds/react-components-toast": "workspace:^",
     "@ds/themes": "workspace:^",
     "@storybook/addon-essentials": "^8.1.5",
     "@storybook/addon-interactions": "^8.1.5",
@@ -27,7 +29,6 @@
     "@ds/react-components-accordion": "workspace:^",
     "@ds/react-components-layout": "workspace:^",
     "@ds/react-hooks-button": "workspace:^",
-    "@ds/react-hooks-input": "workspace:^",
-    "@ds/react-hooks-select": "workspace:^"
+    "@ds/react-hooks-input": "workspace:^"
   }
 }

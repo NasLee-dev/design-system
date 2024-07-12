@@ -2,7 +2,7 @@ import "@ds/react-components-select/style.css";
 import { Select } from "@ds/react-components-select";
 import React from "react";
 
-import "@fastcampus/react-components-layout/style.css";
+import "@ds/react-components-layout/style.css";
 
 
 export default {
