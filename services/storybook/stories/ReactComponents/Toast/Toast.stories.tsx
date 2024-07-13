@@ -1,7 +1,8 @@
 import { Button } from '@ds/react-components-button';
 import React from "react";
 import { ToastProvider } from '@ds/react-components-toast';
-import "@ds/react-components-toast/styles.css"
+import { useToast } from '@ds/react-components-toast';
+import "@ds/react-components-toast/style.css";
 
 export default {
   title: "React Components/Toast",
@@ -11,12 +12,16 @@ export default {
 };
 
 const Example = () => {
-  
+  const { toast } = useToast();
 
   return (
     <Button
       onClick={() =>
-        console.log("Button Clicked")
+        toast({
+          payload: {
+            message: "Hello, world!",
+          },
+        })
       }
     >
       Toast Button

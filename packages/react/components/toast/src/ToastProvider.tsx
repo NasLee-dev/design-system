@@ -1,10 +1,44 @@
-import { PropsWithChildren } from "react"
+import { PropsWithChildren, useContext, useRef, useState } from "react"
+import { ToastPayload } from "."
+import { Toast } from "./Toast"
+import { ToastContainer } from "./ToastContainer"
+import { ToastConfigProps, ToastContext } from "./ToastContext"
 
 export const ToastProvider = ({ children }: PropsWithChildren<{}>) => {
+  const [toastPayload, setToastPayload] = useState<ToastPayload | undefined>(undefined);
+  const timeoutRef = useRef<number | undefined>(undefined);
+
+  const handleToast = (toastProps: ToastConfigProps) => {
+    const { duration = 3000 } = toastProps;
+    if (toastPayload) {
+      setToastPayload(undefined);
+      clearTimeout(timeoutRef.current);
+
+      timeoutRef.current = undefined;
+    }
+
+    setToastPayload(toastProps.payload);
+
+    timeoutRef.current = setTimeout(() => {
+      setToastPayload(undefined);
+      timeoutRef.current = undefined;
+    }, duration);
+  };
+
   return (
-    <div>
+    <ToastContext.Provider value={{ toast: handleToast }}>
       {children}
-      <div>토스트</div>
-    </div>
+      <ToastContainer>
+        {toastPayload && <Toast {...toastPayload} />}
+      </ToastContainer>
+    </ToastContext.Provider>
   )
-}
+};
+
+export const useToast = () => {
+  const context = useContext(ToastContext)
+  if (!context) {
+    throw new Error("useToast must be used within a ToastProvider")
+  }
+  return context;
+};
