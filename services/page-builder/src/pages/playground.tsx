@@ -1,8 +1,10 @@
+import { Box } from '@ds/react-components-layout'
+
 const PlaygroundPage = () => {
   return (
-    <div>
+    <Box padding={3}>
       <h1>PlaygroundPage</h1>
-    </div>
+    </Box>
   )
 }
 
