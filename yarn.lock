@@ -1787,6 +1787,7 @@ __metadata:
     postcss: "npm:^8"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    swiper: "npm:^10.3.1"
     tailwindcss: "npm:^3.4.1"
     ts-node: "npm:^10.9.2"
     tsconfig-paths: "npm:^4.2.0"
@@ -11654,7 +11655,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0, react@npm:^18.3.1":
+"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0, react@npm:^18.0.2, react@npm:^18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
@@ -12772,6 +12773,13 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: a9dc19ae2220c952bd2231d08ddeecb1b0328b61e72071ff4000c8384e145cc07c1c0bdb3b5a1cb06e186a7b2790f1dee793418b332f6ddf320de25d9125be7e
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^10.3.1":
+  version: 10.3.1
+  resolution: "swiper@npm:10.3.1"
+  checksum: 979c23ff3965a0583f75e65b788269f78f9e65f3089f20747216a6334ee7a1d5bee361ee698e7acc6060a140b5443801aec6fcd6f3095ee3acc31771b425124e
   languageName: node
   linkType: hard
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Text } from "@ds/react-components-layout"
 import { vars } from "@ds/themes";
 type Props = {
@@ -32,23 +32,32 @@ export const TextSlice: React.FC<Props> = ({ text, sliceStyle, highlightTexts = 
     highlightTextWeight,
   } = sliceStyle ?? {};
 
-  const regex = new RegExp(`(${highlightTexts?.join('|')})`, 'gi');
-  const highlightedText = text.split(regex).map((word, index) => {
-    if (highlightTexts.some(query => new RegExp(query, 'gi').test(word))) {
-      return (
-        <span 
-          key={`${word}-${index}`}
-          style={{
-            color: highlightColor,
-            fontWeight: highlightTextWeight
-          }}
-        >
-          {word}
-        </span>
-      )
+  
+  const hasHighlightText = highlightTexts.length > 0;
+  const highlightedText = useMemo(() => {
+    if (hasHighlightText) {
+      const regex = new RegExp(`(${highlightTexts.join('|')})`, 'gi');
+
+      return text.split(regex).map((word, index) => {
+        if (highlightTexts.some(query => new RegExp(query, 'gi').test(word))) {
+          return (
+            <span 
+              key={index} 
+              style={{
+                color: highlightColor,
+                fontWeight: highlightTextWeight ?? textWeight
+              }}
+            >
+              {word}
+            </span>
+          );
+        }
+
+        return word;
+      })
     }
-    return word
-  })
+    return text;
+  }, [text, highlightTexts])
 
   return (
     <Text 
