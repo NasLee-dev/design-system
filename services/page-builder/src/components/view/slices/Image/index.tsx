@@ -27,7 +27,7 @@ export const ImageSlice: React.FC<Props> = ({ ImageUrl, alt, sliceStyle }: Props
       paddingX={paddingX}
       paddingY={paddingY}
       style={{
-        width,
+        width: '100%',
         backgroundColor,
         display: 'flex',
         justifyContent: 'center',

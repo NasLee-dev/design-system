@@ -5,7 +5,7 @@ import 'swiper/css';
 import { vars } from '@ds/themes';
 import { convertSpacingRemToPx } from '@/src/utils/size';
 
-type Image = {
+export type Image = {
   imageUrl: string;
   alt: string;
 }
@@ -41,7 +41,14 @@ export const ImageSliderSlice: React.FC<Props> = ({ images, sliceStyle }: Props)
         modules={[Autoplay]}
       >
         {images?.map(({ imageUrl, alt }, index) => (
-          <SwiperSlide key={`${imageUrl}-${index}`} style={{ width: imageItemWidth, }}>
+          <SwiperSlide 
+            key={`${imageUrl}-${index}`} 
+            style={{ 
+              width: imageItemWidth,
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
             <img src={imageUrl} alt={alt} style={{ width: imageItemWidth, }} />
           </SwiperSlide>
         ))}
