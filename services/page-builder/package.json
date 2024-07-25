@@ -20,6 +20,7 @@
     "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
+    "@ds/react-components-accordion": "workspace:^",
     "@types/node": "^20.14.11",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

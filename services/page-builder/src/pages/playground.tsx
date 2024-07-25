@@ -1,5 +1,6 @@
 import { vars } from '@ds/themes'
 import { MobileFirstLayout } from '../components/view/MobileFirstLayout'
+import { AccordionSlice } from '../components/view/slices/Accordion'
 import { ImageSlice } from '../components/view/slices/Image'
 import { ImageSliderSectionSlice } from '../components/view/slices/ImageSliderSection'
 import { SpacingSlice } from '../components/view/slices/Spacing'
@@ -199,6 +200,11 @@ const PlaygroundPage = () => {
           height: 32,
           backgroundColor: vars.colors.$scale.gray[900],
         }}
+      />
+      <AccordionSlice 
+        key="benefit"
+        title="🎁 혜택 안내"
+        content="100일간 무제한 수강 가능한 카테고리별 BEST 강의 라인업을 100원에 만나보세요!"
       />
     </MobileFirstLayout>
   )
