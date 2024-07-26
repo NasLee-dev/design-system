@@ -201,10 +201,65 @@ const PlaygroundPage = () => {
           backgroundColor: vars.colors.$scale.gray[900],
         }}
       />
+      {/* 주의 사항 섹션 */}
+      <SpacingSlice 
+        sliceStyle={{
+          height: 120,
+          backgroundColor: vars.colors.$scale.gray[200],
+        }}
+      />
+      <TextSlice 
+        text="100원딜 이벤트 주의사항"
+        sliceStyle={{
+          backgroundColor: vars.colors.$scale.gray[200],
+          textSize: 24,
+          textWeight: 700,
+        }}
+      />
+      <SpacingSlice 
+        sliceStyle={{
+          height: 16,
+          backgroundColor: vars.colors.$scale.gray[200],
+        }}
+      />
       <AccordionSlice 
-        key="benefit"
-        title="🎁 혜택 안내"
-        content="100일간 무제한 수강 가능한 카테고리별 BEST 강의 라인업을 100원에 만나보세요!"
+        accordionContents={[
+          {
+            key: '1',
+            title: '이벤트 기간',
+            content: '2021년 8월 1일 ~ 2021년 8월 31일까지',
+          },
+          {
+            key: '2',
+            title: '이벤트 내용',
+            content: '100원에 만나볼 수 있는 BEST 강의 라인업을 확인하고, 100일간 무제한 수강하세요!',
+          },
+          {
+            key: '3',
+            title: '이벤트 참여 방법',
+            content: '이벤트 기간 동안, 이벤트 페이지에서 원하는 강의를 선택하고 100원을 결제하세요.',
+          },
+          {
+            key: '4',
+            title: '이벤트 참여 대상',
+            content: '이벤트 기간 동안, 이벤트 페이지에서 원하는 강의를 선택하고 100원을 결제하세요.',
+          },
+          {
+            key: '5',
+            title: '이벤트 참여 대상',
+            content: '이벤트 기간 동안, 이벤트 페이지에서 원하는 강의를 선택하고 100원을 결제하세요.',
+          },
+        ]}
+        openedAccordion={true}
+        sliceStyle={{
+          backgroundColor: vars.colors.$scale.gray[200],
+        }}
+      />
+      <SpacingSlice 
+        sliceStyle={{
+          height: 120,
+          backgroundColor: vars.colors.$scale.gray[200],
+        }}
       />
     </MobileFirstLayout>
   )

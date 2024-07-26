@@ -1,11 +1,16 @@
 import { vars } from '@ds/themes';
-import { Box } from '@ds/react-components-layout';
+import { Box, Text } from '@ds/react-components-layout';
 import { Accordion, AccordionButton, AccordionItem, AccordionPanel } from '@ds/react-components-accordion';
 
+type AccordionContentItem = {
+  key: string
+  title: string
+  content: string
+}
+
 type Props = {
-  key: string;
-  title: string;
-  content: string;
+  accordionContents: AccordionContentItem[]
+  openedAccordion?: boolean;
 
   sliceStyle?: {
     padding?: keyof typeof vars.box.spacing;
@@ -21,13 +26,25 @@ type Props = {
   };
 };
 
-export const AccordionSlice: React.FC<Props> = ({ key, title, content, sliceStyle }: Props) => {
+export const AccordionSlice: React.FC<Props> = ({ 
+  accordionContents,
+  sliceStyle, 
+  openedAccordion 
+}: Props) => {
   const {
     padding = 0,
     paddingX = 2,
     paddingY = 0,
     backgroundColor = vars.colors.$scale.gray[200],
+    titleTextColor = vars.colors.$scale.gray[900],
+    titleTextSize = 16,
+    titleTextWeight = 600,
+    contentTextColor = vars.colors.$scale.gray[600],
+    contentTextSize = 14,
+    contentTextWeight = 400,
   } = sliceStyle ?? {};
+
+  const defaultActiveItems = openedAccordion ? accordionContents.map(({ key }) => key) : [];
 
   return (
     <Box
@@ -38,11 +55,42 @@ export const AccordionSlice: React.FC<Props> = ({ key, title, content, sliceStyl
         backgroundColor,
       }}
     >
-      <Accordion>
-        <AccordionItem itemName={key}>
-          <AccordionButton>{title}</AccordionButton>
-          <AccordionPanel>{content}</AccordionPanel>  
-        </AccordionItem>
+      <Accordion defaultActiveItems={defaultActiveItems}>
+        {
+          accordionContents.map(({ key, title, content }) => (
+            <AccordionItem
+              key={key}
+              itemName={key}
+            >  
+              <AccordionButton>
+                <Text 
+                  fontSize="xl"
+                  style={{
+                    color: titleTextColor,
+                    fontSize: titleTextSize,
+                    fontWeight: titleTextWeight,
+                    whiteSpace: 'pre-wrap',
+                  }}
+                >
+                  {title}
+                </Text>
+              </AccordionButton>
+              <AccordionPanel>
+                <Text 
+                  fontSize="md" 
+                  style={{
+                    color: contentTextColor,
+                    fontSize: contentTextSize,
+                    fontWeight: contentTextWeight,
+                    whiteSpace: 'pre-wrap',
+                  }}
+                >
+                  {content}
+                </Text>
+              </AccordionPanel>  
+            </AccordionItem>
+          ))
+        }
       </Accordion>
     </Box>
   )
