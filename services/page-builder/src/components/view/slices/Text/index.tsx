@@ -1,24 +1,12 @@
-import React, { useMemo } from "react";
-import { Text } from "@ds/react-components-layout"
-import { vars } from "@ds/themes";
-type Props = {
-  text: string;
-  highlightTexts?: string[];
-  sliceStyle?: {
-    padding?: keyof typeof vars.box.spacing;
-    paddingX?: keyof typeof vars.box.spacing;
-    paddingY?: keyof typeof vars.box.spacing;
-    backgroundColor?: string;
-    textColor?: string;
-    textSize?: keyof typeof vars.typography.fontSize;
-    textWeight?: keyof typeof vars.typography.fontWeight;
-    textAlign?: "left" | "center" | "right";
-    highlightColor?: string;
-    highlightTextWeight?: keyof typeof vars.typography.fontWeight;
-  };
-};
+import { TextSliceSchema } from '@/src/utils/validation/schema/slices';
+import { SliceSchemaProps } from '@/src/utils/validation/schema/types';
+import { Text } from '@ds/react-components-layout';
+import { vars } from '@ds/themes';
+import { useMemo } from 'react';
 
-export const TextSlice: React.FC<Props> = ({ text, sliceStyle, highlightTexts = [] }: Props) => {
+type Props = SliceSchemaProps<typeof TextSliceSchema>;
+
+export const TextSlice: React.FC<Props> = ({ text, highlightTexts = [], sliceStyle }: Props) => {
   const {
     padding = 2,
     paddingX = 2,
@@ -27,25 +15,24 @@ export const TextSlice: React.FC<Props> = ({ text, sliceStyle, highlightTexts = 
     textColor = vars.colors.$static.light.color.black,
     textSize,
     textWeight,
-    textAlign = 'center',
-    highlightColor = vars.colors.$static.light.yellow[400],
+    textAlign = "center",
+    highlightTextColor = vars.colors.$static.light.yellow[400],
     highlightTextWeight,
   } = sliceStyle ?? {};
 
-  
   const hasHighlightText = highlightTexts.length > 0;
   const highlightedText = useMemo(() => {
     if (hasHighlightText) {
-      const regex = new RegExp(`(${highlightTexts.join('|')})`, 'gi');
+      const regex = new RegExp(`(${highlightTexts.join("|")})`, "gi");
 
       return text.split(regex).map((word, index) => {
-        if (highlightTexts.some(query => new RegExp(query, 'gi').test(word))) {
+        if (highlightTexts.some(query => new RegExp(query, 'i').test(word))) {
           return (
-            <span 
-              key={index} 
+            <span
+              key={`${word}-${index}`}
               style={{
-                color: highlightColor,
-                fontWeight: highlightTextWeight ?? textWeight
+                color: highlightTextColor,
+                fontWeight: highlightTextWeight ?? textWeight,
               }}
             >
               {word}
@@ -54,27 +41,29 @@ export const TextSlice: React.FC<Props> = ({ text, sliceStyle, highlightTexts = 
         }
 
         return word;
-      })
-    }
+      });
+    };
+
     return text;
-  }, [text, highlightTexts])
+  }, [text, highlightTexts]);
 
   return (
-    <Text 
-      fontSize="2xl" 
-      padding={padding} 
-      paddingX={paddingX} 
-      paddingY={paddingY} 
+    <Text
+      padding={padding}
+      paddingX={paddingX}
+      paddingY={paddingY}
+      fontSize="2xl"
       style={{
         backgroundColor,
         color: textColor,
-        textAlign,
         fontSize: textSize,
         fontWeight: textWeight,
-        whiteSpace: 'pre-wrap',
-        wordBreak: 'keep-all'
-      }}>
+        textAlign,
+        whiteSpace: "pre-wrap",
+        wordBreak: "keep-all",
+      }}
+    >
       {highlightedText}
     </Text>
-  )
+  );
 };

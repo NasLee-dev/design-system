@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
 import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
 import { getViewDetail } from "@/src/apis/worker/getViewDetail";
-import { MobileFirstLayout } from "@/src/components/view/MobileFirstLayout";
+import { MobileFirstLayout } from "@/src/components/layout/MobileFirstLayout";
 
 const ViewPage = ({ jsonSchema }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const slices = useViewSchemaSlices(jsonSchema);

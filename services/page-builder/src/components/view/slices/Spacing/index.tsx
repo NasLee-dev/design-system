@@ -1,26 +1,19 @@
-import React from "react";
-import { Box } from '@ds/react-components-layout';
+import { SpacingSliceSchema } from "@/src/utils/validation/schema/slices";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
+import { Box } from "@ds/react-components-layout";
 import { vars } from "@ds/themes";
 
-type Props = {
-  sliceStyle?: {
-    height?: number;
-    backgroundColor?: string;
-  }
-};
+type Props = SliceSchemaProps<typeof SpacingSliceSchema>;
 
 export const SpacingSlice: React.FC<Props> = ({ sliceStyle }: Props) => {
   const {
     height = 16,
     backgroundColor = vars.colors.$static.light.color.white,
   } = sliceStyle ?? {};
+
   return (
     <Box
-      style={{
-        height: `${height}px`,
-        backgroundColor: backgroundColor,
-        width: "100%",
-      }}
+      style={{ width: '100%', height: height, backgroundColor, }}
     />
   );
 };

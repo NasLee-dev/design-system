@@ -1,4 +1,3 @@
-
 import { z } from "zod";
 import { commonSliceStyleSchema } from "./style";
 import { AccordionContentSchema, ImageSchema } from "./object";

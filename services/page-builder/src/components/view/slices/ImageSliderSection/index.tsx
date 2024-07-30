@@ -1,25 +1,18 @@
-import { Image } from '../ImageSlider'
-import { vars } from '@ds/themes'
-import { TextSlice } from '../Text'
-import { ImageSliderSlice } from '../ImageSlider'
 
-type Props = {
-  text: string;
-  images: Image[];
-  sliceStyle?: {
-    paddingX?: keyof typeof vars.box.spacing;
-    textColor?: string;
-    backgroundColor?: string;
-    imageItemWidth?: number;
-  }
-};
+import { vars } from "@ds/themes";
+import { ImageSliderSlice } from "../ImageSlider";
+import { TextSlice } from "../Text";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
+import { ImageSliderSectionSliceSchema } from "@/src/utils/validation/schema/slices";
+
+type Props = SliceSchemaProps<typeof ImageSliderSectionSliceSchema>;
 
 export const ImageSliderSectionSlice: React.FC<Props> = ({ text, images, sliceStyle }: Props) => {
   const {
     paddingX = 8,
     textColor = vars.colors.$static.light.color.black,
     backgroundColor = vars.colors.$static.light.color.white,
-    imageItemWidth = 280
+    imageItemWidth = 280,
   } = sliceStyle ?? {};
 
   return (
@@ -30,19 +23,19 @@ export const ImageSliderSectionSlice: React.FC<Props> = ({ text, images, sliceSt
           textSize: 20,
           textColor,
           backgroundColor,
-          textAlign: 'left',
+          textAlign: "left",
           paddingX,
-          textWeight: 700
+          textWeight: 700,
         }}
       />
-      <ImageSliderSlice 
+      <ImageSliderSlice
         images={images}
         sliceStyle={{
           paddingX,
           imageItemWidth,
-          backgroundColor: vars.colors.$scale.gray[900],
+          backgroundColor,
         }}
       />
     </>
-  )
+  );
 };

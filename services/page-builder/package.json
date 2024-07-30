@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ds/react-components-button": "workspace:^",
     "@ds/react-components-layout": "workspace:^",
     "@ds/themes": "workspace:^",
     "next": "14.2.5",

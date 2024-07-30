@@ -1779,6 +1779,7 @@ __metadata:
   resolution: "@ds/page-builder@workspace:services/page-builder"
   dependencies:
     "@ds/react-components-accordion": "workspace:^"
+    "@ds/react-components-button": "workspace:^"
     "@ds/react-components-layout": "workspace:^"
     "@ds/themes": "workspace:^"
     "@types/node": "npm:^20.14.11"
