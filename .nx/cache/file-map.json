@@ -25,6 +25,115 @@
     }
   },
   "fileMap": {
+    "projectFileMap": {
+      "@ds/react-components-layout": [
+        {
+          "file": "packages/react/components/layout/build.js",
+          "hash": "16350337001006990927"
+        },
+        {
+          "file": "packages/react/components/layout/package.json",
+          "hash": "3425415528659384416",
+          "deps": [
+            "@ds/esbuild-config",
+            "@ds/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/layout/src/Block.tsx",
+          "hash": "13587484772723829549"
+        },
+        {
+          "file": "packages/react/components/layout/src/index.ts",
+          "hash": "16280579595165486571"
+        },
+        {
+          "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "2444245072852979607"
+        }
+      ],
+      "@ds/esbuild-config": [
+        {
+          "file": "packages/esbuild-config/README.md",
+          "hash": "6886952344311067916"
+        },
+        {
+          "file": "packages/esbuild-config/index.js",
+          "hash": "3827031141927899532"
+        },
+        {
+          "file": "packages/esbuild-config/package.json",
+          "hash": "8551291180655402055"
+        }
+      ],
+      "@ds/themes": [
+        {
+          "file": "packages/themes/build.js",
+          "hash": "10024860138368064033"
+        },
+        {
+          "file": "packages/themes/package.json",
+          "hash": "5533607196302718754",
+          "deps": [
+            "@ds/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/themes/scripts/build-css-module.js",
+          "hash": "14191212368529907444"
+        },
+        {
+          "file": "packages/themes/src/classes/index.ts",
+          "hash": "8329742454280706329"
+        },
+        {
+          "file": "packages/themes/src/classes/typography.ts",
+          "hash": "9322460245457577087"
+        },
+        {
+          "file": "packages/themes/src/index.ts",
+          "hash": "10865083219890802429"
+        },
+        {
+          "file": "packages/themes/src/variables/box.ts",
+          "hash": "1206324658560801694"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/index.ts",
+          "hash": "5310896953250476487"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/scale.ts",
+          "hash": "12790816549739475990"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/dark.ts",
+          "hash": "8879695469343073307"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/index.ts",
+          "hash": "4475049428200278483"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/light.ts",
+          "hash": "5111065768491833496"
+        },
+        {
+          "file": "packages/themes/src/variables/index.ts",
+          "hash": "9166851927291213899"
+        },
+        {
+          "file": "packages/themes/src/variables/typography.ts",
+          "hash": "1729358794327708129"
+        },
+        {
+          "file": "packages/themes/tsconfig.json",
+          "hash": "9757273637688057132"
+        }
+      ]
+    },
     "nonProjectFiles": [
       {
         "file": ".eslintrc.js",
@@ -127,6 +236,322 @@
         "hash": "6608870252383205300"
       },
       {
+        "file": "services/page-builder/.next/build-manifest.json",
+        "hash": "3512246126005819578"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/0.pack.gz",
+        "hash": "12907885256191988065"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/1.pack.gz",
+        "hash": "9451683963658910575"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/10.pack.gz",
+        "hash": "13957930099204708986"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/11.pack.gz",
+        "hash": "11580078179356357669"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/12.pack.gz",
+        "hash": "9742646861080921072"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/13.pack.gz",
+        "hash": "12389566083482439995"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/2.pack.gz",
+        "hash": "2730948842351927217"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/3.pack.gz",
+        "hash": "3644127679161859396"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/4.pack.gz",
+        "hash": "2210298085834956802"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/5.pack.gz",
+        "hash": "337446899027120932"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/6.pack.gz",
+        "hash": "6860570201447636637"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/7.pack.gz",
+        "hash": "4964310235039242091"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/8.pack.gz",
+        "hash": "12264156858840375203"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/9.pack.gz",
+        "hash": "18105918102531226779"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/index.pack.gz",
+        "hash": "6328925727141785020"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/client-development/index.pack.gz.old",
+        "hash": "11799695664721683339"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/0.pack.gz",
+        "hash": "6513337476341964565"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/1.pack.gz",
+        "hash": "9698308827518555091"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/10.pack.gz",
+        "hash": "17348229390439509376"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/11.pack.gz",
+        "hash": "13083758906213934426"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/2.pack.gz",
+        "hash": "10150281322845967702"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/3.pack.gz",
+        "hash": "10650501782662002940"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/4.pack.gz",
+        "hash": "12911686217523004819"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/5.pack.gz",
+        "hash": "12473240692460590790"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/6.pack.gz",
+        "hash": "4606449759875140263"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/7.pack.gz",
+        "hash": "9221319350634921648"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/8.pack.gz",
+        "hash": "704533727560338281"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/9.pack.gz",
+        "hash": "9627845412055613742"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/index.pack.gz",
+        "hash": "12480771899191866811"
+      },
+      {
+        "file": "services/page-builder/.next/cache/webpack/server-development/index.pack.gz.old",
+        "hash": "9401912428840778032"
+      },
+      {
+        "file": "services/page-builder/.next/package.json",
+        "hash": "11338307439248427064"
+      },
+      {
+        "file": "services/page-builder/.next/react-loadable-manifest.json",
+        "hash": "1389868326933519382"
+      },
+      {
+        "file": "services/page-builder/.next/server/_error.js",
+        "hash": "8788292769786592348"
+      },
+      {
+        "file": "services/page-builder/.next/server/interception-route-rewrite-manifest.js",
+        "hash": "10484309360224763022"
+      },
+      {
+        "file": "services/page-builder/.next/server/middleware-build-manifest.js",
+        "hash": "12219846677772080880"
+      },
+      {
+        "file": "services/page-builder/.next/server/middleware-manifest.json",
+        "hash": "9889576824779923310"
+      },
+      {
+        "file": "services/page-builder/.next/server/middleware-react-loadable-manifest.js",
+        "hash": "9185069726031651908"
+      },
+      {
+        "file": "services/page-builder/.next/server/next-font-manifest.js",
+        "hash": "16541577805185552134"
+      },
+      {
+        "file": "services/page-builder/.next/server/next-font-manifest.json",
+        "hash": "11891788324563068681"
+      },
+      {
+        "file": "services/page-builder/.next/server/pages-manifest.json",
+        "hash": "7275880247259037775"
+      },
+      {
+        "file": "services/page-builder/.next/server/pages/_app.js",
+        "hash": "3280661366461989397"
+      },
+      {
+        "file": "services/page-builder/.next/server/pages/_document.js",
+        "hash": "10781992041837498027"
+      },
+      {
+        "file": "services/page-builder/.next/server/pages/_error.js",
+        "hash": "16037460403979552570"
+      },
+      {
+        "file": "services/page-builder/.next/server/pages/editor.js",
+        "hash": "2716877954643947824"
+      },
+      {
+        "file": "services/page-builder/.next/server/pages/editor/new.js",
+        "hash": "8381224526607361216"
+      },
+      {
+        "file": "services/page-builder/.next/server/vendor-chunks/@swc.js",
+        "hash": "3873694685848216328"
+      },
+      {
+        "file": "services/page-builder/.next/server/vendor-chunks/clsx.js",
+        "hash": "4373769476059830536"
+      },
+      {
+        "file": "services/page-builder/.next/server/vendor-chunks/next.js",
+        "hash": "5194609244031591361"
+      },
+      {
+        "file": "services/page-builder/.next/server/webpack-runtime.js",
+        "hash": "3905422149910584148"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/_error.js",
+        "hash": "13539489459354572537"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/main.js",
+        "hash": "15338820748823863424"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/pages/_app.js",
+        "hash": "12054796681086813447"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/pages/_error.js",
+        "hash": "16656352196676590588"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/pages/editor.js",
+        "hash": "4455525744919956732"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/pages/editor/new.js",
+        "hash": "16133092708166542255"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/polyfills.js",
+        "hash": "1955602371502312040"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/react-refresh.js",
+        "hash": "9849370564528014873"
+      },
+      {
+        "file": "services/page-builder/.next/static/chunks/webpack.js",
+        "hash": "9820189308762442688"
+      },
+      {
+        "file": "services/page-builder/.next/static/development/_buildManifest.js",
+        "hash": "3174422828545899758"
+      },
+      {
+        "file": "services/page-builder/.next/static/development/_ssgManifest.js",
+        "hash": "17018243955171961484"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/19911631edf34321.webpack.hot-update.json",
+        "hash": "9268438280717108770"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/24e33e22ba178691.webpack.hot-update.json",
+        "hash": "12990104523671895431"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/633457081244afec._.hot-update.json",
+        "hash": "10481436618516908015"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/7854715f2975b529.webpack.hot-update.json",
+        "hash": "13405125561290911638"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/9053c340a6fdab8a.webpack.hot-update.json",
+        "hash": "2488710116557129619"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/99e54cd748af2e7a.webpack.hot-update.json",
+        "hash": "2119347039229349316"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/b3b942883822be66.webpack.hot-update.json",
+        "hash": "13405125561290911638"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/pages/_app.24e33e22ba178691.hot-update.js",
+        "hash": "3529542525313954467"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/pages/editor.9053c340a6fdab8a.hot-update.js",
+        "hash": "615645621075670263"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/pages/editor/new.99e54cd748af2e7a.hot-update.js",
+        "hash": "12799506367792037427"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/webpack.19911631edf34321.hot-update.js",
+        "hash": "1760059775400370601"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/webpack.24e33e22ba178691.hot-update.js",
+        "hash": "4223136429952696241"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/webpack.7854715f2975b529.hot-update.js",
+        "hash": "9820184705214484804"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/webpack.9053c340a6fdab8a.hot-update.js",
+        "hash": "1534554292555824863"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/webpack.99e54cd748af2e7a.hot-update.js",
+        "hash": "7169041419358241481"
+      },
+      {
+        "file": "services/page-builder/.next/static/webpack/webpack.b3b942883822be66.hot-update.js",
+        "hash": "8713559643073478690"
+      },
+      {
+        "file": "services/page-builder/.next/trace",
+        "hash": "8952096151498801021"
+      },
+      {
+        "file": "services/page-builder/next-env.d.ts",
+        "hash": "5909181270615354023"
+      },
+      {
         "file": "tsconfig.base.json",
         "hash": "12919597497980113116"
       },
@@ -136,117 +561,8 @@
       },
       {
         "file": "yarn.lock",
-        "hash": "18326693942736334547"
+        "hash": "10020439985672198763"
       }
-    ],
-    "projectFileMap": {
-      "@ds/themes": [
-        {
-          "file": "packages/themes/build.js",
-          "hash": "10024860138368064033"
-        },
-        {
-          "file": "packages/themes/package.json",
-          "hash": "5533607196302718754",
-          "deps": [
-            "@ds/esbuild-config",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/themes/scripts/build-css-module.js",
-          "hash": "14191212368529907444"
-        },
-        {
-          "file": "packages/themes/src/classes/index.ts",
-          "hash": "8329742454280706329"
-        },
-        {
-          "file": "packages/themes/src/classes/typography.ts",
-          "hash": "9322460245457577087"
-        },
-        {
-          "file": "packages/themes/src/index.ts",
-          "hash": "10865083219890802429"
-        },
-        {
-          "file": "packages/themes/src/variables/box.ts",
-          "hash": "1206324658560801694"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/index.ts",
-          "hash": "5310896953250476487"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/scale.ts",
-          "hash": "12790816549739475990"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/static/dark.ts",
-          "hash": "8879695469343073307"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/static/index.ts",
-          "hash": "4475049428200278483"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/static/light.ts",
-          "hash": "5111065768491833496"
-        },
-        {
-          "file": "packages/themes/src/variables/index.ts",
-          "hash": "9166851927291213899"
-        },
-        {
-          "file": "packages/themes/src/variables/typography.ts",
-          "hash": "1729358794327708129"
-        },
-        {
-          "file": "packages/themes/tsconfig.json",
-          "hash": "9757273637688057132"
-        }
-      ],
-      "@ds/esbuild-config": [
-        {
-          "file": "packages/esbuild-config/README.md",
-          "hash": "6886952344311067916"
-        },
-        {
-          "file": "packages/esbuild-config/index.js",
-          "hash": "3827031141927899532"
-        },
-        {
-          "file": "packages/esbuild-config/package.json",
-          "hash": "8551291180655402055"
-        }
-      ],
-      "@ds/react-components-layout": [
-        {
-          "file": "packages/react/components/layout/build.js",
-          "hash": "9219515693451921604"
-        },
-        {
-          "file": "packages/react/components/layout/package.json",
-          "hash": "17694942270298247967",
-          "deps": [
-            "@ds/esbuild-config",
-            "@ds/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/layout/src/Block.tsx",
-          "hash": "13587484772723829549"
-        },
-        {
-          "file": "packages/react/components/layout/src/index.ts",
-          "hash": "16280579595165486571"
-        },
-        {
-          "file": "packages/react/components/layout/tsconfig.json",
-          "hash": "2444245072852979607"
-        }
-      ]
-    }
+    ]
   }
 }
