@@ -1,9 +1,9 @@
-import Image from "next/image";
+import * as s from "./page.css";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Hello World</h1>
+    <main className={s.main}>
+      <h1 className={s.typo}>Hello World</h1>
     </main>
   );
 }

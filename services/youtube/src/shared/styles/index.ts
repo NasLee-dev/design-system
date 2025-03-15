@@ -1,3 +1,3 @@
-import "./globals.css";
+import "./globals.css.ts";
 import "./reset.css";
 import "./fds";
