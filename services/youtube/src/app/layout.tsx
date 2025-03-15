@@ -1,4 +1,11 @@
-import "./globals.css";
+import { Metadata } from "next";
+import "@/src/shared/styles";
+import { ThemeScript } from "../shared/components/ThemeScript";
+
+export const metadata: Metadata = {
+  title: "Youtube",
+  description: "재미있는 유튜브",
+};
 
 export default function RootLayout({
   children,
@@ -7,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <ThemeScript />
+        {children}
+      </body>
     </html>
   );
 }
