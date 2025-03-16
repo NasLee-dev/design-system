@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ds/themes": "workspace:^",
+    "googleapis": "^146.0.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18"
