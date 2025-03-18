@@ -37,7 +37,7 @@ module.exports = {
     {
       files: ["*.ts", "*.tsx", "packages/react/components/input/src/input.tsx"],
       parserOptions: {
-        "project": ["./tsconfig.eslint.json"]
+        project: ["./tsconfig.eslint.json"],
       },
       rules: {
         "no-undef": "off",
