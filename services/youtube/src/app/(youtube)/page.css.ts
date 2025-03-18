@@ -1,6 +1,6 @@
 import { vars } from "@ds/themes";
 import { style } from "@vanilla-extract/css";
-import { f } from "../shared/styles/functions";
+import { f } from "../../shared/styles/functions";
 
 export const main = style([
   f.flexCenterBox,
