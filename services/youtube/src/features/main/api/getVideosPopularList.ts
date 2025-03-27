@@ -12,7 +12,7 @@ export type PopularListItem = {
   videoId: string;
   title: string;
   description: string;
-  channerId: string;
+  channelId: string;
   channelTitle: string;
   thumbnail: VideoThumbnail;
   publishedAtDisplayText: string;
