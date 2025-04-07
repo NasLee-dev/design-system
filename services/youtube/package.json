@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "dev:mocking": "NEXT_PUBLIC_MOCKING=true next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -30,6 +31,7 @@
     "@vanilla-extract/dynamic": "2.0.3",
     "@vanilla-extract/next-plugin": "^2.4.10",
     "@vanilla-extract/recipes": "^0.5.0",
+    "msw": "^2.7.3",
     "typescript": "^5.5.3"
   }
 }

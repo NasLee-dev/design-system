@@ -8,6 +8,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true,
+    "incremental": true
   }
 }
