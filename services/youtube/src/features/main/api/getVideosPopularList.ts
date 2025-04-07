@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "@/src/shared/api/youtube/constants";
-import { VideoThumbnail } from "@/src/shared/api/youtube/types/item";
+import { Thumbnail } from "@/src/shared/api/youtube/types/item";
+
 import { youtube_v3 } from "googleapis";
 import queryString from "query-string";
 
@@ -14,7 +15,7 @@ export type PopularListItem = {
   description: string;
   channelId: string;
   channelTitle: string;
-  thumbnail: VideoThumbnail;
+  thumbnail: Thumbnail;
   publishedAtDisplayText: string;
   viewCount: number;
   viewCountDisplayText: string;
@@ -40,13 +41,13 @@ export interface GetVideoPopularListResponse {
   totalResults: number;
 }
 
-export const getVideosPopularListPath = "/api/videos/popular-list";
+export const getVideosPopularListURL = `${API_BASE_URL}/api/videos/popular-list`;
 
 export const getVideoPopularList = async (
   params: GetVideoPopularListRequestParams,
 ): Promise<GetVideoPopularListResponse> => {
   const queryParams = queryString.stringify(params);
-  const url = `${API_BASE_URL}${getVideosPopularListPath}?${queryParams}`;
+  const url = `${getVideosPopularListURL}?${queryParams}`;
   const response = await fetch(url);
 
   if (!response.ok) {

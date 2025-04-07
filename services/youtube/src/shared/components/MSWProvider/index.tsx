@@ -1,24 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { isMocking } from "../../constants";
-import { initMocking } from "../../mocks";
+import { useEffect } from "react";
 
-export const MSWProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isReady, setIsReady] = useState(isMocking());
-
+export function MSWProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    if (!isReady) {
-      (async () => {
+    if (process.env.NODE_ENV === "development") {
+      const initMocks = async () => {
+        const { initMocking } = await import("../../mocks");
         await initMocking();
-        setIsReady(true);
-      })();
+      };
+      initMocks();
     }
-  }, [isReady]);
-
-  if (!isReady) {
-    return null;
-  }
+  }, []);
 
   return <>{children}</>;
-};
+}

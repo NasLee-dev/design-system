@@ -2,7 +2,7 @@ import {
   getVideoPopularList,
   GetVideoPopularListRequestParams,
   GetVideoPopularListResponse,
-  getVideosPopularListPath,
+  getVideosPopularListURL,
 } from "../api/getVideosPopularList";
 import {
   UseSuspenseInfiniteQueryResult,
@@ -22,7 +22,7 @@ export const useGetVideosPopularList = ({
   Error
 > => {
   return useSuspenseInfiniteQuery({
-    queryKey: ["videos", getVideosPopularListPath, maxResults, initPageToken],
+    queryKey: ["videos", getVideosPopularListURL, maxResults, initPageToken],
     queryFn: async ({ pageParam = initPageToken }) => {
       return await getVideoPopularList({
         maxResults,
