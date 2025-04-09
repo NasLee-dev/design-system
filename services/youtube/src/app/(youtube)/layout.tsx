@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <SearchNavigationBar />
       <div
         style={{
-          marginTop: NAVIGATION_BAR_HEIGHT,
+          paddingTop: NAVIGATION_BAR_HEIGHT,
         }}
       >
         {children}

@@ -5,10 +5,10 @@ import * as s from "./style.css";
 import { getSearchPageLink } from "@/src/shared/utils/link/page";
 
 export const SearchForm = () => {
+  const router = useRouter();
+
   const searchParams = useSearchParams();
   const initialSearchValue = searchParams.get("q") ?? "";
-
-  const router = useRouter();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

@@ -6,6 +6,7 @@ type SearchPageQueryParams = Pick<
   GetSearchVideosListRequestParams,
   "order" | "q"
 >;
+
 export const getSearchPageLink = (params: SearchPageQueryParams) => {
   const parsedParams = queryString.parse(location.search);
 
