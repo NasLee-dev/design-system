@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import { f } from "@/src/shared/styles/functions";
 import { vars } from "@ds/themes";
-import { responsiveStyle } from "@/src/shared/styles/functions/layout";
+import { responsiveStyle } from "@/src/shared/styles/functions/layout.css";
 
 export const wrapper = style([
   f.wFull,

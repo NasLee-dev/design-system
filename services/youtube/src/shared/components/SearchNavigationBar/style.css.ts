@@ -1,7 +1,7 @@
 import { f } from "@/src/shared/styles/functions";
 import { vars } from "@ds/themes";
 import { style } from "@vanilla-extract/css";
-import { responsiveStyle } from "../../styles/functions/layout";
+import { responsiveStyle } from "../../styles/functions/layout.css";
 
 export const NAVIGATION_BAR_HEIGHT = "56px";
 

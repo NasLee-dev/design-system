@@ -1,5 +1,5 @@
 import { f } from "@/src/shared/styles/functions";
-import { responsiveStyle } from "@/src/shared/styles/functions/layout";
+import { responsiveStyle } from "@/src/shared/styles/functions/layout.css";
 import { vars } from "@ds/themes";
 import { style } from "@vanilla-extract/css";
 
