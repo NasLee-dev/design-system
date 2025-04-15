@@ -51,7 +51,7 @@ const mappingResponse = (
         description: snippet?.description ?? "",
         channelId: snippet?.channelId ?? "",
         channelTitle: snippet?.channelTitle ?? "",
-        thumbnail: {
+        thumbnails: {
           url: snippet?.thumbnails?.default?.url ?? "",
           width: snippet?.thumbnails?.medium?.width ?? undefined,
           height: snippet?.thumbnails?.medium?.height ?? undefined,

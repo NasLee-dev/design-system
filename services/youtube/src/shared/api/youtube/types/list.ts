@@ -12,7 +12,7 @@ export type VideoListItem = {
   description: string;
   channelId: string;
   channelTitle: string;
-  thumbnail: Thumbnail;
+  thumbnails: Thumbnail;
   publishedAt: string;
   publishedAtDisplayText: string; // 1개월 전
 };

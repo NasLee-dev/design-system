@@ -16,7 +16,7 @@ export const SearchFilter = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [order, setOrder] = useState<SearchOrder>(
-    (searchParams.get("order") as SearchOrder) || "relevance",
+    (searchParams.get("order") ?? "relevance") as SearchOrder,
   );
   const filterItems = Object.entries(SEARCH_ORDER_TYPO);
   const handleClickChip = (order: SearchOrder) => {
