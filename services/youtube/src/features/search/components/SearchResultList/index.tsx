@@ -1,5 +1,6 @@
 "use client";
 import { VisibilityLoader } from "@/src/shared/components/VisibilityLoader";
+import { flattenInfiniteListData } from "@/src/shared/utils/data";
 import { useSearchParams } from "next/navigation";
 import { SearchOrder } from "../../api/getSearchVideosList";
 import { useGetSearchVideosList } from "../../hooks/useGetSearchVideosList";
@@ -14,7 +15,7 @@ export const SearchResultList = () => {
       q: searchParams.get("q") ?? "",
     });
 
-  const flatData = data?.pages.map((page) => page.lists).flat();
+  const flatData = flattenInfiniteListData(data);
   return (
     <>
       <section className={s.container}>

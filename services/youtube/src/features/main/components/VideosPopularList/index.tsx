@@ -1,5 +1,6 @@
 "use client";
 import { VisibilityLoader } from "@/src/shared/components/VisibilityLoader";
+import { flattenInfiniteListData } from "@/src/shared/utils/data";
 import { useGetVideosPopularList } from "../../hooks/useGetVideosPopularList";
 import { VideosPopularListItem } from "./ListItem";
 import * as s from "./style.css";
@@ -8,7 +9,7 @@ export const VideosPopularList = () => {
   const { data, fetchNextPage, isFetchingNextPage, hasNextPage } =
     useGetVideosPopularList({});
 
-  const flatData = data.pages.map((page) => page?.lists ?? []).flat();
+  const flatData = flattenInfiniteListData(data);
 
   return (
     <>

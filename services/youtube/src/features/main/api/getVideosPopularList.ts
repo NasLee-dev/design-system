@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "@/src/shared/api/youtube/constants";
 import { Thumbnail } from "@/src/shared/api/youtube/types/item";
+import { ListResponse } from "@/src/shared/api/youtube/types/list";
 
 import { youtube_v3 } from "googleapis";
 import queryString from "query-string";
@@ -21,25 +22,7 @@ export type PopularListItem = {
   viewCountDisplayText: string;
 };
 
-export interface GetVideoPopularListResponse {
-  lists: {
-    videoId: string;
-    title: string;
-    description: string;
-    channelId: string;
-    channelTitle: string;
-    thumbnail: {
-      url: string;
-    };
-    publishedAt: string;
-    publishedAtDisplayText: string;
-    viewCount: number;
-    viewCountDisplayText: string;
-  }[];
-  prevPageToken?: string;
-  nextPageToken?: string;
-  totalResults: number;
-}
+export type GetVideoPopularListResponse = ListResponse<PopularListItem>;
 
 export const getVideosPopularListURL = `${API_BASE_URL}/api/videos/popular-list`;
 
