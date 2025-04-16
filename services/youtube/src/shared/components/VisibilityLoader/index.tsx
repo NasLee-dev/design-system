@@ -4,6 +4,7 @@ import {
 } from "../../hooks/useIntersectionObserver";
 import { Spinner } from "../base/Spinner";
 import * as s from "./style.css";
+
 type Props = {
   children?: React.ReactNode;
 } & UseIntersectionObserverProps;
