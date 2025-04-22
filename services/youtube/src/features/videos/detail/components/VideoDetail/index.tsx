@@ -3,6 +3,7 @@
 import { useGetVideosDetail } from "../../hooks/useGetVideosDetail";
 import { VideoDetailPageParams } from "../../types";
 import { VideoDetailChannelProfile } from "../ChannelProfile";
+import { VideoDetailDescription } from "../Description";
 import * as s from "./style.css";
 
 type Props = VideoDetailPageParams["params"];
@@ -30,6 +31,9 @@ export const VideoDetail = ({ videoId }: Props) => {
         <div className={s.infoWrapper}>
           <VideoDetailChannelProfile videoId={videoId} />
           <div className={s.likeWrapper}>{likeCountDisplayText}</div>
+        </div>
+        <div className={s.panelWrapper}>
+          <VideoDetailDescription videoId={videoId} />
         </div>
       </div>
     </section>
