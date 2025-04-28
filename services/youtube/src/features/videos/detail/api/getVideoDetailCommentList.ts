@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "@/src/shared/api/youtube/constants";
 import {
   CommentListItem,
   ListResponse,
@@ -15,3 +16,13 @@ export type VideosDetailCommentListItem = CommentListItem & {
 
 export type GetVideosDetailCommentListResponse =
   ListResponse<VideosDetailCommentListItem>;
+
+export const getVideosDetailCommentListURL = `${API_BASE_URL}/api/videos/detail/:videoId/comment-list`;
+
+export const getVideosDetailCommentList = async (
+  params: GetVideoDetailCommentListRequestParams,
+): Promise<GetVideosDetailCommentListResponse> => {
+  const url = getVideosDetailCommentListURL.replace(":videoId", params.videoId);
+  const response = await fetch(url);
+  return response.json();
+};
