@@ -1,5 +1,6 @@
 "use client";
 
+import { VisibilityLoader } from "@/src/shared/components/VisibilityLoader";
 import { flattenInfiniteListData } from "@/src/shared/utils/data";
 import { useGetVideosDetail } from "../../hooks/useGetVideosDetail";
 import { useGetVideosDetailCommentList } from "../../hooks/useGetVideosDetailCommentList";
@@ -14,19 +15,33 @@ export const VideoDetailCommentList = ({ videoId }: Props) => {
     data: { detail: videoDetail },
   } = useGetVideosDetail({ videoId });
 
-  const { data } = useGetVideosDetailCommentList({ videoId });
+  const { data, isFetching, fetchNextPage, hasNextPage } =
+    useGetVideosDetailCommentList({
+      videoId,
+    });
   const flatData = flattenInfiniteListData(data);
   return (
-    <section className={s.wrapper}>
-      <h4 className={s.title}>댓글 {videoDetail.commentCountDisplayText}개</h4>
-      <div className={s.contentsWrapper}>
-        {flatData.map((comment) => (
-          <VideoDetailCommentListItem
-            key={comment.commentId}
-            comment={comment}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <section className={s.wrapper}>
+        <h4 className={s.title}>
+          댓글 {videoDetail.commentCountDisplayText}개
+        </h4>
+        <div className={s.contentsWrapper}>
+          {flatData.map((comment) => (
+            <VideoDetailCommentListItem
+              key={comment.commentId}
+              comment={comment}
+            />
+          ))}
+        </div>
+      </section>
+      {hasNextPage && (
+        <VisibilityLoader
+          callback={() => {
+            !isFetching && fetchNextPage();
+          }}
+        />
+      )}
+    </>
   );
 };

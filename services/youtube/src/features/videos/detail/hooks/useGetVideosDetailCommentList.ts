@@ -1,13 +1,14 @@
 import {
-  GetVideoDetailCommentListRequestParams,
-  GetVideosDetailCommentListResponse,
-  getVideosDetailCommentList,
-} from "../api/getVideoDetailCommentList";
-import {
   InfiniteData,
+  UseSuspenseInfiniteQueryResult,
   useSuspenseInfiniteQuery,
-  UseSuspenseQueryResult,
 } from "@tanstack/react-query";
+
+import {
+  GetVideoDetailCommentListRequestParams,
+  getVideosDetailCommentList,
+  GetVideosDetailCommentListResponse,
+} from "../api/getVideoDetailCommentList";
 
 type Params = Pick<GetVideoDetailCommentListRequestParams, "videoId"> & {
   initPageToken?: string;
@@ -16,16 +17,16 @@ type Params = Pick<GetVideoDetailCommentListRequestParams, "videoId"> & {
 export const useGetVideosDetailCommentList = ({
   videoId,
   initPageToken,
-}: Params): UseSuspenseQueryResult<
+}: Params): UseSuspenseInfiniteQueryResult<
   InfiniteData<GetVideosDetailCommentListResponse>,
   Error
 > => {
   return useSuspenseInfiniteQuery({
-    queryKey: ["videoDatail", "commentList", videoId, initPageToken],
+    queryKey: ["videoDetail", "commentList", videoId, initPageToken],
     queryFn: async ({ pageParam = initPageToken }) =>
       await getVideosDetailCommentList({ videoId, pageToken: pageParam }),
-    getNextPageParam: (lastPage: GetVideosDetailCommentListResponse) =>
-      lastPage?.nextPageToken,
     initialPageParam: initPageToken,
+    getNextPageParam: (lastPage: GetVideosDetailCommentListResponse) =>
+      lastPage.nextPageToken,
   });
 };
