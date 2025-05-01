@@ -34,7 +34,7 @@ export const contentsWrapper = style([f.wFull]);
 export const titleWrapper = style([f.flex, f.justifyStart, f.alignCenter]);
 
 export const title = style([
-  f.color.scale.gray[900],
+  f.color.scale.gray[700],
   f.truncate1,
   {
     fontSize: "13px",
