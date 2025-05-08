@@ -8,7 +8,7 @@ import {
   GetVideoDetailCommentListRequestParams,
   getVideosDetailCommentList,
   GetVideosDetailCommentListResponse,
-} from "../api/getVideoDetailCommentList";
+} from "../../../../shared/api/youtube/client/videoDetail/getVideoDetailCommentList";
 
 type Params = Pick<GetVideoDetailCommentListRequestParams, "videoId"> & {
   initPageToken?: string;

@@ -12,6 +12,7 @@ export const GET = async (
 ) => {
   try {
     const videoId = params.videoId;
+    const isShortVideo = await isShort(videoId);
     const { data: videoData } = await youtubeServerInstance.videos.list({
       part: ["snippet", "statistics"],
       id: [videoId],
@@ -48,6 +49,7 @@ export const GET = async (
     const mappedData = mappingResponse({
       videoData: rawVideoDetail,
       channelData: rawChannelDetail,
+      isShortVideo,
     });
 
     return NextResponse.json(mappedData);
@@ -130,4 +132,22 @@ const mappingResponse = ({
       },
     },
   };
+};
+
+const isShort = async (videoId: string) => {
+  const url = "https://www.youtube.com/shorts/" + videoId;
+
+  try {
+    const response = await fetch(url, {
+      method: "HEAD",
+    });
+    if (response.ok) {
+      const responseUrl = response.url;
+      return responseUrl.includes("/shorts/");
+    } else {
+      return false;
+    }
+  } catch (error) {
+    return false;
+  }
 };

@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "@/src/shared/api/constants";
+import { API_BASE_URL } from "@/src/shared/api/youtube/constants";
 import {
   Channel,
   ChannelStatistics,
