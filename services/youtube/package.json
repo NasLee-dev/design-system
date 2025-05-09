@@ -15,12 +15,14 @@
     "@ds/themes": "workspace:^",
     "@tanstack/react-query": "^5.69.0",
     "@tanstack/react-query-next-experimental": "^5.69.0",
+    "framer-motion": "^10.16.16",
     "googleapis": "^146.0.0",
     "next": "13.5.4",
     "query-string": "^9.1.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-intersection-observer": "^9.16.0"
+    "react-intersection-observer": "^9.16.0",
+    "react-youtube": "^10.1.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
