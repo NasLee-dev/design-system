@@ -8,7 +8,7 @@ import { ButtonItem } from "./ButtonItem";
 import * as s from "./style.css";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
-import { VideoDetailCommentList } from "../../../detail/components/VideoDetailCommentList";
+import { VideoDetailCommentList } from "../../../../../shared/components/VideoDetailCommentList";
 
 type Props = VideoDetailPageParams["params"];
 
