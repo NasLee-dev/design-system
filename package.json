@@ -33,7 +33,9 @@
     "@ds/react-components-layout": "workspace:^",
     "@ds/react-hooks-button": "workspace:^",
     "@ds/themes": "workspace:^",
+    "@types/swiper": "^6.0.0",
     "query-string": "^8.1.0",
+    "swiper": "^11.2.6",
     "typescript": "4.4.3",
     "vite": "^4.4.9"
   },

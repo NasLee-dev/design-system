@@ -1,5 +1,5 @@
 import { VideoDetailPageParams } from "@/src/features/videos/detail/types";
-import { ShortsVideoDetail } from "@/src/features/videos/shorts/components/ShortsVideoDetail";
+import { ShortsVideoList } from "@/src/features/videos/shorts/components/ShortsVideosList";
 import { Suspense } from "react";
 import * as s from "./style.css";
 export default function ShortsVideoDetailPage({
@@ -12,7 +12,7 @@ export default function ShortsVideoDetailPage({
       <div className={s.container}>
         <div className={s.wrapper}>
           <Suspense fallback={<div>loading...</div>}>
-            <ShortsVideoDetail videoId={videoId} />
+            <ShortsVideoList videoId={videoId} />
           </Suspense>
         </div>
       </div>

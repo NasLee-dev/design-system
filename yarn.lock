@@ -3320,6 +3320,7 @@ __metadata:
     react-dom: "npm:^18"
     react-intersection-observer: "npm:^9.16.0"
     react-youtube: "npm:^10.1.0"
+    swiper: "npm:^11.2.6"
     typescript: "npm:^5.5.3"
     vitest: "npm:^3.1.1"
   languageName: unknown
@@ -7034,6 +7035,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/swiper@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@types/swiper@npm:6.0.0"
+  dependencies:
+    swiper: "npm:*"
+  checksum: 53688c7fd949895d24deff102679d1a1080cd876a7d493de263aff818666cfa06ccd043a8602e9ecabf581cd750815426aec544796f27d1bfa1d71b815a966e9
+  languageName: node
+  linkType: hard
+
 "@types/tough-cookie@npm:^4.0.5":
   version: 4.0.5
   resolution: "@types/tough-cookie@npm:4.0.5"
@@ -9464,6 +9474,7 @@ __metadata:
     "@ds/react-hooks-button": "workspace:^"
     "@ds/themes": "workspace:^"
     "@storybook/addon-docs": "npm:^8.1.5"
+    "@types/swiper": "npm:^6.0.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.5.0"
     "@typescript-eslint/parser": "npm:^6.5.0"
     "@vitest/ui": "npm:^2.0.3"
@@ -9479,6 +9490,7 @@ __metadata:
     nx: "npm:^16.8.1"
     prettier: "npm:^3.0.3"
     query-string: "npm:^8.1.0"
+    swiper: "npm:^11.2.6"
     typescript: "npm:4.4.3"
     vite: "npm:^4.4.9"
   languageName: unknown
@@ -16570,6 +16582,13 @@ __metadata:
   bin:
     svgo: ./bin/svgo
   checksum: 82fdea9b938884d808506104228e4d3af0050d643d5b46ff7abc903ff47a91bbf6561373394868aaf07a28f006c4057b8fbf14bbd666298abdd7cc590d4f7700
+  languageName: node
+  linkType: hard
+
+"swiper@npm:*, swiper@npm:^11.2.6":
+  version: 11.2.6
+  resolution: "swiper@npm:11.2.6"
+  checksum: 1c4e32ee5ecbd2d0e281bb3d186622af3702482da12b4a003238b9e03087e4f4710d74071e362d49253271a13090e70ec9d5e0f2900eca3b59a791ec0d8fcbc7
   languageName: node
   linkType: hard
 
