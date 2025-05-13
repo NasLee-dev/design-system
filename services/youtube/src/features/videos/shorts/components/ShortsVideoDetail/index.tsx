@@ -3,16 +3,16 @@ import { Suspense, useState } from "react";
 import { useGetVideosDetail } from "../../../detail/hooks/useGetVideosDetail";
 import { VideoDetailPageParams } from "../../../detail/types";
 import { useHandleInvalidShortsVideoType } from "../../hooks/useHandleInvalidShortsVideoType";
-import { ShortsPlayer } from "../ShortsPlayer";
+import { ShortsPlayer, ShortsPlayerConfig } from "../ShortsPlayer";
 import { ButtonItem } from "./ButtonItem";
 import * as s from "./style.css";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { VideoDetailCommentList } from "../../../../../shared/components/VideoDetailCommentList";
 
-type Props = VideoDetailPageParams["params"];
+type Props = VideoDetailPageParams["params"] & ShortsPlayerConfig;
 
-export const ShortsVideoDetail = ({ videoId }: Props) => {
+export const ShortsVideoDetail = ({ videoId, autoPlay }: Props) => {
   const {
     data: { detail: videoDetail },
   } = useGetVideosDetail({ videoId });
@@ -34,7 +34,7 @@ export const ShortsVideoDetail = ({ videoId }: Props) => {
               }}
             />
           </div>
-          <ShortsPlayer videoId={videoId} autoPlay={true} />
+          <ShortsPlayer videoId={videoId} autoPlay={autoPlay} />
         </div>
         <AnimatePresence initial={false}>
           {showComment && (

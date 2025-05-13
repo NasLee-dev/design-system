@@ -1,8 +1,7 @@
 "use client";
 
-import { flattenInfiniteListData } from "@/src/shared/utils/data";
-import { VideoDetailPageParams } from "../../../detail/types";
 import { useGetShortsVideosList } from "../../hooks/useGetShortsVideosList";
+
 import { Mousewheel, Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,12 +9,14 @@ import "swiper/css/mousewheel";
 import "swiper/css/virtual";
 import { Suspense } from "react";
 import { ShortsVideoDetail } from "../ShortsVideoDetail";
+import { flattenInfiniteListData } from "@/src/shared/utils/data";
 
-type Props = VideoDetailPageParams["params"];
+type Props = {
+  videoId: string;
+};
 
 export const ShortsVideoList = ({ videoId }: Props) => {
-  const { data } = useGetShortsVideosList({});
-
+  const { data, hasNextPage, fetchNextPage } = useGetShortsVideosList({});
   const flatData = flattenInfiniteListData(data);
 
   const list = [{ videoId }, ...flatData];
@@ -26,7 +27,8 @@ export const ShortsVideoList = ({ videoId }: Props) => {
         direction="vertical"
         slidesPerView={1}
         modules={[Mousewheel, Virtual]}
-        autoHeight={true}
+        autoHeigh={true}
+        mousewheel
         virtual={{
           enabled: true,
           slides: list,
@@ -37,14 +39,22 @@ export const ShortsVideoList = ({ videoId }: Props) => {
           width: "100%",
           height: "830px",
         }}
+        onReachEnd={() => {
+          if (hasNextPage) fetchNextPage();
+        }}
       >
         {list.map((item, index) => (
           <SwiperSlide key={item.videoId} virtualIndex={index}>
-            <div>
-              <Suspense>
-                <ShortsVideoDetail videoId={item.videoId} />
-              </Suspense>
-            </div>
+            {({ isActive }: { isActive: boolean }) => (
+              <div>
+                <Suspense>
+                  <ShortsVideoDetail
+                    videoId={item.videoId}
+                    autoPlay={isActive}
+                  />
+                </Suspense>
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
